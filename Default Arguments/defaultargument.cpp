@@ -10,7 +10,7 @@ int main()
     float r;
     cout << "Enter Principal,time and rate";
     cin >> p >> t >> r;
-    interest(p, t);
+    interest(p, t); //using default value of r
     interest(p, t, r);
     return 0;
 }

@@ -12,7 +12,6 @@ using namespace std;
 
 #define pi 3.14 //semicolon isn't used in defining macro
 
-
 int area(int l)
 {
     return (6 * l);
@@ -35,3 +34,5 @@ int main()
     cout << "Area of rectangel is:" << area(3, 4);
     return 0;
 }
+
+// Program automatically picks the right function based on input arguments
