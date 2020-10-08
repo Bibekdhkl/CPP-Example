@@ -30,8 +30,8 @@ int area(int l, int b)
 
 int main()
 {
-    cout << "Area of cube is:" << area(2) << endl;
-    cout << "Area of cylinder is:" << area(3.2, 4) << endl; //
-    cout << "Area of rectangel is:" << area(3, 4);
+    cout << "Area of cube is: " << area(2) << endl;
+    cout << "Area of cylinder is: " << area(3.2, 4) << endl;
+    cout << "Area of rectangle is: " << area(3, 4);
     return 0;
 }
