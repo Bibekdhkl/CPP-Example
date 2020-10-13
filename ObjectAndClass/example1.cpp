@@ -1,3 +1,4 @@
+
 #include <iostream>
 
 using namespace std;
@@ -13,16 +14,17 @@ public:
     {
         cout << "Enter your name" << endl;
         cin >> name;
-        cout << endl<< "Enter your marks";
+        cout << endl
+             << "Enter your marks";
         cin >> marks;
     }
     void display();
 };
 
-void Student :: display()
+void Student ::display()
 {
     cout << "Your name is:" << name;
-    cout << "Your marks is:"<<marks;
+    cout << "Your marks is:" << marks;
 }
 
 int main()
