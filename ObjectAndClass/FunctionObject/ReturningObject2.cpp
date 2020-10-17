@@ -1,4 +1,4 @@
-/*  Using member function which accepts two Objects */
+/*  Calling Object from a member function  */
 #include <iostream>
 
 using namespace std;
@@ -17,7 +17,7 @@ public:
         cout << endl
              << "The sum of seconds is :" << second;
     }
-    void AddTime(time F, time I);
+    time AddTime(time T1);
 };
 
 void time ::getDetails()
@@ -26,11 +26,20 @@ void time ::getDetails()
     cin >> hours >> minutes >> second;
 }
 
-void time ::AddTime(time Obj1, time Obj2)
-{
-    hours = Obj1.hours + Obj2.hours;
-    minutes = Obj1.minutes + Obj2.minutes;
-    second = Obj1.second + Obj2.second;
+time time ::AddTime(time T1)
+{   
+    time T2;
+    //finding seconds
+    T2.second = second + T1.second;
+    T2.minutes = T2.second / 60;
+    T2.second = T2.second % 60;
+    //finding minutes
+    T2.minutes = T2.minutes + minutes + T1.minutes;
+    T2.hours = T2.minutes % 60;
+    T2.minutes = T2.minutes / 60;
+    //finding hours 
+    T2.hours = hours + T1.hours + T2.hours;
+    return T2;
 }
 
 int main()
@@ -38,7 +47,7 @@ int main()
     time Time1, Time2, Add;
     Time1.getDetails();
     Time2.getDetails();
-    Add.AddTime(Time1, Time2);
+    Add=Time2.AddTime(Time1);
     Add.display();
     return 0;
 }
