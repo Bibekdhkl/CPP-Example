@@ -1,3 +1,4 @@
+/* 3. Define a class Complex with data members real and img. Write a program to overload binary (+) operator to add two Complex numbers, binary minus (–) operator to subtract two Complex number and multiplication operator (*) to multiply two Complex numbers*/
 #include<iostream>
 
 using namespace std;
@@ -13,40 +14,40 @@ class Complex{
             void display(){
                   cout<<"\nThe real number is: "<<real<<" The imaginary number is: "<<img;
             }
-            Complex operator + (Complex plusObj){
+            Complex operator + (Complex C){//one less argument as object for binary objects
                   Complex temp;
-                  temp.real=real+plusObj.real;
-                  temp.img=img+plusObj.img;
+                  temp.real=real+C.real;
+                  temp.img=img+C.img;
                   return temp;
             }
-            friend Complex operator - (Complex,Complex);
-            friend void operator * (Complex&,Complex&);
+            friend Complex operator - (Complex,Complex);//for friend all the objects must be passed as argument
+            friend void operator * (Complex&,Complex&);//since it take reference as argument so don't need to return object
 };
 
-Complex operator - (Complex aobj,Complex bobj){
+Complex operator - (Complex C1,Complex C2){
       Complex temp;
-      temp.real=aobj.real-bobj.real;
-      temp.img=aobj.img-bobj.img;
+      temp.real=C1.real-C2.real;
+      temp.img=C1.img-C2.img;
       return temp;
 }
 
-void operator * (Complex &obj,Complex &cobj){
-      obj.real*=cobj.real;
-      obj.img*=cobj.img;
+void operator * (Complex &C1,Complex &C2){
+      C1.real*=C2.real;
+      C1.img*=C2.img;
 }
 
 int main(){
-      Complex Aobj(4,5),Bobj(9,2),robj;
-      Aobj.display();
-      Bobj.display();
-      robj=Aobj+Bobj;
+      Complex C1(4,5),C2(9,2),C3;
+      C1.display();
+      C2.display();
+      C3=C1+C2;
       cout<<"\n\nAfter Addition";
-      robj.display();
-      robj=operator-(Aobj,Bobj);
+      C3.display();
+      C3=operator-(C1,C2);
       cout<<"\n\nAfter Subtraction";
-      robj.display();
-      operator*(Aobj,Bobj);
+      C3.display();
+      operator*(C1,C2);
       cout<<"\n\nAfter Multiplication";
-      Aobj.display();
+      C1.display();
       return 0;
 }

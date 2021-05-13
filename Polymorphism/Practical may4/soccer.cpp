@@ -1,3 +1,4 @@
+/*5. Design a Soccer Player class that includes three integer fields : a player’s jersey number, number of goals, number of assists and necessary constructors to initialize data members. Overload > operator (greater than) operator. One player is considered greater than another if the sum of goals plus assists is greater than that of the others. Create an array of 11 soccer players, then use overloaded > operator to find the player who has greater total of goals plus assists. */
 #include<iostream>
 
 using namespace std;

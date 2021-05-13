@@ -1,3 +1,4 @@
+/* 4. Define a class Currency with private data members Rs and Paisa. Overload ‘++’ and ‘ - -‘ operator to use it in object of Currency class*/
 #include<iostream>
 
 using namespace std;

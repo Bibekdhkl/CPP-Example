@@ -1,3 +1,5 @@
+/*2. Write a program to overload multiplication operator (*) to multiply each element of 3*3 matrix by 9.
+*/
 #include<iostream>
 
 using namespace std;

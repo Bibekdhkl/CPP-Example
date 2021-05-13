@@ -1,3 +1,4 @@
+/* 1. Define a class Distance with data member kilometer and meter. Add 5 to the distance object by overloading binary plus operator. */
 #include<iostream>
 
 using namespace std;
